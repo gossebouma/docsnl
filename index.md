@@ -28,7 +28,7 @@ udver: '2'
 * All tags are used except PART.
 * AUX is used for 
     * perfect tense auxiliaries _hebben_ and _zijn_
-    * the passive tense auxiliary _worden_
+    * the passive tense auxiliaries _worden_ and _zijn_ and _krijgen_ (The latter for so-called cases of _krijgen-passive_ such as _U krijgt een bewegwijzering toegezonden_
     * the modal verbs _kunnen, zullen, moeten, mogen, blijken, hoeven_ (The treebank annotation on which the conversion to UD is based does not distinguish between auxiliaries and main verbs. Here we take a conservative approach in labeling modals as auxiliaries. )
     * the copula verbs _zijn, worden, blijven, heten, blijken and lijken_ (These are the Dutch copula verbs according to Dutch grammar, excluding cases where the copula takes an additional (non-subject, non-predicative) argument)
 * DET is used for words that are part of a noun phrase and function as determiner. They are:
