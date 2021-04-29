@@ -74,7 +74,36 @@ Detailed documentation of the decisions w.r.t. features in the original data can
 
 ## Syntax
 
-*
+* acl, acl:relcl
+* advcl
+* advmod
+* amod
+* appos
+* aux, aux:pass
+* case
+* cc
+* ccomp
+* compound:prt
+* conj
+* cop
+* csubj
+* det
+* expl, expl:pv
+* fixed
+* flat
+* iobj
+* mark
+* nmod, nmod:poss
+* nsubj, nsubj:pass
+* nummod
+* obj
+* obl, obl:agent
+* orphan
+* parataxis
+* punct
+* root
+* xcomp
+
 
 ---
 **Instruction**: Give criteria for identifying core arguments (subjects and objects), and describe the range of copula constructions in nonverbal clauses. List all subtype relations used. Include links to language-specific relations definitions if any.
