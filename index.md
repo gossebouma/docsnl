@@ -56,19 +56,21 @@ udver: '2'
 
 Detailed documentation of the decisions w.r.t. POS-tags in the original data can be found in the [D-COI POS-tagging and lemmatization manual](https://www.let.rug.nl/vannoord/Lassy/POS_manual.pdf)
 
----
-**Instruction**: Specify any unused tags. Explain what words are tagged as PART. Describe how the AUX-VERB and DET-PRON distinctions are drawn, and specify whether there are (de)verbal forms tagged as ADJ, ADV or NOUN. Include links to language-specific tag definitions if any.
-
----
-
 ### Features
 
-*
+* Abbr=Yes for abbreviations (POS=X, XPOS=SPEC|afk)
+* Case=Acc,Nom for PRON (Nom for XPOS=VNW|nomin, Acc for XPOS=VNW|obl). 
+* Definite=Def,Ind for DET (Def for XPOS=LID|bep, Ind for XPOS=LID|onbep)
+* Degree=Pos,Cmp,Sup for adjectives (POS=ADJ, Pos for XPOS=ADJ|basis, Sup for ADJ|sup, Cmp for ADJ|comp) 
+* Gender=Com,Neut for NOUN and PROPN, Com for N|onz, Neut for N|onz, Com,Neut for N|genus 
+* Person=1,2,3 for PRON (1 for XPOS=VNW|1, 2 for XPOS=VNW|2,2v,2b, 3 for XPOS=VNW|3,3p,3v,3p,3o
+* PronType=Int,Prs,Ind,Rel,Dem for PRON (Dem for demonstratives, VNW|aanw, Rel for relative pronouns, VNW|betr, Prs for personal and possessive pronouns, VNW|pers and VNW|bez, Ind for indefinite pronouns,  VNW|onbep, Int for interoggative pronouns, VNW|vb). 
+* Number=Sing,Plur for AUX, NOUN, VERB, PROPN, Sing for WW|ev, WW|met-t, N|ev, Plur for WW|mv, N|mv 
+* Poss=Yes for PRON with VNW|bez 
+* Reflex=Yes for PRON with VNW|refl 
+* VerbForm=Inf,Fin,Part for AUX and VERB with Inf for WW|inf, Fin for WW|pv and Part for WW|od or WW|vd 
 
----
-**Instruction**: Describe inherent and inflectional features for major word classes (at least NOUN and VERB). Describe other noteworthy features. Include links to language-specific feature definitions if any.
-
----
+Detailed documentation of the decisions w.r.t. features in the original data can be found in the [D-COI POS-tagging and lemmatization manual](https://www.let.rug.nl/vannoord/Lassy/POS_manual.pdf)
 
 ## Syntax
 
