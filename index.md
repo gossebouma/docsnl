@@ -10,9 +10,9 @@ udver: '2'
 
 
 * Words are delimited by whitespace or punctuation
-* Words do not contain spaces
-* Words (e.g. abbreviations, names, URLs etc.) may contain arbitrary punctuation signs
-* No multiword tokens occur
+* Words do not contain spaces, although some lemma's for multi-word expressions do (au serieux, dat wil zeggen, onder ander, onder veel, ter plaatse, tot en met)
+* Words (e.g. abbreviations, names, URLs etc.) may contain arbitrary punctuation signs (http://www.speelgoedmuseum.be, vroeg-renaissance, o.a., ex-VU&ID)
+* No multiword tokens occur 
 
 ---
 **Instruction**: Describe the general rules for delimiting words (for example, based on whitespace and punctuation) and exceptions to these rules. Specify whether words with spaces and/or multiword tokens occur. Include links to further language-specific documentation if available.
