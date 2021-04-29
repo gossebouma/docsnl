@@ -33,7 +33,7 @@ udver: '2'
     * the passive tense auxiliaries _worden_ and _zijn_ and _krijgen_ (in so-called cases of _krijgen-passive_ such as _U krijgt een bewegwijzering toegezonden_)
     * the modal verbs _kunnen, zullen, moeten, mogen_ (The treebank annotation on which the conversion to UD is based does not distinguish between auxiliaries and main verbs. Here we take a conservative approach in labeling only these modals as auxiliaries. )
     * the copula verb _zijn_ (UD allows only one copula verb per language, even though traditional Dutch syntax lists several verbs as copula-verbs.)
-* CCONJ (XPOS=VG|neven) is used for coordinating conjunctions such as _en_ and _of_, _zowel_ X _als_ Y. 
+* CCONJ (XPOS=VG|neven) is used for coordinating conjunctions such as _en_ and _of_, _zowel_ (X _als_ Y). (ISSUE: Note that _als_ in this context is labeled SCONJ as it is XPOS=VG|onder)
 * DET (XPOS=LID, XPOS=VNW|prenom) is used for words that are part of a noun phrase and function as determiner. They are:
    * words that have XPOS LID in the original data (_de, het, een_). These are words traditionally seen as determiners in Dutch
    * Prenominal pronouns (_deze, welke, meerdere, sommige_) with the exception of possessive pronouns (_mijn_). They are labeled PRON. 
@@ -49,10 +49,11 @@ udver: '2'
 * PROPN (XPOS=N|eigen, SPEC|deeleigen) is used for proper names (_Achterberg_) and the parts of multi-word names (_ Gerrit Achterberg_). When used as adjective (_Amsterdamse_), names are labeled ADJ. 
 * PUNCT (XPOS=LET) is used for punctuation. 
 * SCONJ (XPOS=VG|onder) is used for subordinating conjunctions (_als, dat, of, omdat, toen_).  
-   * ISSUE: in multi-word expressions such as _dan wel_ _dan_ is VG|onder but could also be VG|neven
-* SYM 
-* VERB is used for words labeled pt=ww in the original data and that are not AUX. Note that according to this method, in nominalizations, the head is a VERB. 
-* X 
+   * ISSUE: in multi-word expressions such as _dan wel_ _dan_ is VG|onder but could also be VG|neven and thus CCONJ with seems more appropriate as it also introduces a cc in syntax. 
+* SYM (XPOS=SPEC|sym, SPEC|afgebr, SPEC|vreemd, LET) is used for symbols (), foreign words (_unit, vici, walkover_), incomplete words (_welzijns-, zorg-_) and interpunction that does not introduce a punc relation in syntax (i.e. as it is part of a name/title (_ZinderZlam !_) or a multi-word unit (_en / of_) ). 
+* VERB (XPOS=WW) is used for verbs that are not AUX. Note that adjectively used verbs and nominalized verbs are VERB (_passende maatregelen, het verplaatsen van voorwerpen_).  
+* X (XPOS=SPEC|afk) is used for abbreviations (_ v.Chr., o.a., nr._) 
+
 Detailed documentation of the decisions w.r.t. POS-tags in the original data can be found in the [D-COI POS-tagging and lemmatization manual](https://www.let.rug.nl/vannoord/Lassy/POS_manual.pdf)
 
 ---
