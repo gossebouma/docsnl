@@ -25,9 +25,9 @@ udver: '2'
 
 ### Tags
 
-* ADJ (XPOS=ADJ) is used for adjectives. Adjectives occur as prenominal modifiers, as predicates, as seperable verb-particles, as adverbs, as part of fixed expressions and names. Also, in cases where an adjective functions as noun (_om Nederlandstaligen te pesten_) the POS is still ADJ. 
+* ADJ (XPOS=ADJ) is used for adjectives. Adjectives occur as prenominal modifiers, as predicates, as seperable verb-particles, as adverbs, as part of fixed expressions and names. Also, in cases where an adjective functions as noun (_om Nederlandstaligen te pesten_) the POS is still ADJ. Ordinal number words such as _eerste, 60ste_ (XPOS=TW|rang) are also ADJ.
 * ADP (XPOS=VZ) is used for prepositions and postpositions. They introduce nominal and verbal modifiers. They also occur as seperable verb-particles, as part of fixed expressions and names. The verbal inflexion element _te_ is also an ADP.  In prepositional phrases such as _ten opzichte van_ _ten_ and _van_ are ADP and _opzichte_ is a NOUN. 
-* ADV (XPOS=BW) is used for adverbs. 
+* ADV (XPOS=BW) is used for adverbs. Also, some adverbial pronouns (R-pronouns) such as _daar, er, ergens, waar_ are ADV. 
 * AUX (XPOS=WW) is used for 
     * perfect tense auxiliaries _hebben_ and _zijn_
     * the passive tense auxiliaries _worden_ and _zijn_ and _krijgen_ (in so-called cases of _krijgen-passive_ such as _U krijgt een bewegwijzering toegezonden_)
@@ -37,19 +37,22 @@ udver: '2'
 * DET (XPOS=LID, XPOS=VNW|prenom) is used for words that are part of a noun phrase and function as determiner. They are:
    * words that have XPOS LID in the original data (_de, het, een_). These are words traditionally seen as determiners in Dutch
    * Prenominal pronouns (_deze, welke, meerdere, sommige_) with the exception of possessive pronouns (_mijn_). They are labeled PRON. 
+   * ISSUE: In multi-word determiner expressions such as _maar weinig_, _helemaal geen_, _al mijn_, both words are DET. The modifiers should be ADV and _mijn_ should be PRON. 
+   * ISSUE: Numeric elements such as +11,77 or 26% (XPOS=SPEC|symb) are labeled as DET if their grammatical function is det, where this should be NUM. (Note that regular numeric values such as 11 or 26 have XPOS=TW and are labeled NUM.)
 * INTJ (XPOS=TSW) Elements that are not part of the syntactic structure such as _ach, verrek, jazeker_
-* NOUN (XPOS=N|soort) 
-* NUM
-* PRON is used for non-adverbial pronominal elements. They are: 
-   * words with pt=vnw in the original annotation that do not function as determiner and that are not of pdtype=adv-pron.
-* PROPN (XPOS=N|eigen) 
-* PUNCT
-* SCONJ
+* NOUN (XPOS=N|soort) Nouns can be the head of a variety of dependents, such as subject, object, oblique, etc. 
+* NUM (XPOS=TW|hoofd). Tokens such as _1, 0,80, +4,20 -1, 1.000, 040-12280, drieduizend, iv, twaalf_. Note that elements such as _eerste_ are labeled ADJ. 
+* PART is not used. In particular, seperable verb prefixes are assigned their regular POS and are a compound:prt dependent of the verb. 
+* PRON (XPOS=VNW) is used for 
+   * possessive pronouns
+   * pronominal elements that do not occur in prenominal position but are depedents of a verb, like personal and impersonal pronouns (_ik, u, iemand _)
+* PROPN (XPOS=N|eigen, SPEC|deeleigen) is used for proper names (_Achterberg_) and the parts of multi-word names (_ Gerrit Achterberg_). When used as adjective (_Amsterdamse_), names are labeled ADJ. 
+* PUNCT (XPOS=LET) is used for punctuation. 
+* SCONJ (XPOS=VG|onder) is used for subordinating conjunctions (_als, dat, of, omdat, toen_).  
+   * ISSUE: in multi-word expressions such as _dan wel_ _dan_ is VG|onder but could also be VG|neven
 * SYM 
 * VERB is used for words labeled pt=ww in the original data and that are not AUX. Note that according to this method, in nominalizations, the head is a VERB. 
-* ADJ is used for words labeled pt=adj in the original data.
-* NOUN is used for words labeled pt=n in the original data that do not have ntype=deeleigen. (The latter are part of a proper name and are labeled PROPN)
-    
+* X 
 Detailed documentation of the decisions w.r.t. POS-tags in the original data can be found in the [D-COI POS-tagging and lemmatization manual](https://www.let.rug.nl/vannoord/Lassy/POS_manual.pdf)
 
 ---
