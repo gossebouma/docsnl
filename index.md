@@ -74,6 +74,8 @@ Detailed documentation of the decisions w.r.t. features in the original data can
 
 ## Syntax
 
+The Dutch treebanks are automatically converted from annotated and manually corrected treebanks. Detailed documentation of the  the original syntactic annotation is in the [syntactic annotation manual](http://www.let.rug.nl/~vannoord/Lassy/sa-man_lassy.pdf) of the Lassy project. The data included in the UD treebanks can be explored using the [PaQu](https://paqu.let.rug.nl:8068/xpath) interface, which supports querying both the original and UD annotation. 
+
 * acl, acl:relcl: acl is used for phrases headed by a verb modifying a noun. These can be prenominal (as in _thans geldende rentestand_) postnominal (as in _de vraag of de rente zal stijgen_). acl:relcl is used for relative clauses. In the original syntactic annotation these are nodes with an _mod_ dependency relation that occur as sister to a nominal head, and which have a category ppres, ppart (prenominal), or cp, oti (postnominal) or rel (relative clauses). Verbs without dependents in prenominal position are considered to be amod. 
 * advcl: advl is used for phrases that occur as modifying phrases (adjuncts) and are dependents of a verbal head. In the original annotation they have relation _mod_ and they can be of category cp, oti, ppart, among others. 
 * advmod: advmod is used for adverbs and adverbial phrases modifying a verb. The POS of advmod elements is almost always ADV or ADJ. 
@@ -82,12 +84,12 @@ Detailed documentation of the decisions w.r.t. features in the original data can
 * aux, aux:pass aux is used for auxiliaries as defined above in the section on POS tags. Note that this implies that auxiliaries are dependents of the main verb with which they co-occur. In the original annotation, no distinction between verbs and auxiliaries is made, and auxiliaries always have a sister that is a clause headed by the main verb. Note that this also means that elements such as subjects, complementizers, and even the marker '_te_' become dependents of the main verb, and not the auxiliary. 
 * case case is used for prepositions (ADP) that introduce a prepositional phrase. The preposition is a dependent of the head of the nominal phrase. Where there is both a preposition and a postposition (_door de eeuwen heen_, _om hem heen_) both elements are case dependents of the nominal head. In cases where the nominal element is replaced by an R-pronoun (_er_ etc), the R-pronoun precedes the preposition, and may be nonadjacent to the preposition  (_U doet er verstandig aan_). Note that this is a source of non-projective annotations. 
 * cc cc is used for coordination words such as _en, of, maar_. 
-* ccomp
-* compound:prt
-* conj
-* cop
-* csubj
-* det
+* ccomp ccomp is used for complement clauses that are dependents of a verb. Complement clauses are phrases with relation vc in the original annotation and that are headed by a finite verb or a te-infinitive, so they can be of category cp, whsub, ti, oti. In ccomp clauses, there is no controlled subject. 
+* compound:prt is used for seperable verbal prefixes (_ groeide uit, aan te wijzen_) and the non-verbal part of phrasal verbs (_ op prijs stellen, bekend staan, kenbaar maken_)
+* conj is used for conjuncts. 
+* cop is used for the copula _zijn_ only. Thus, the copula is a dependent of the predicate. If the copula is preceded by the inflection marker _te_, the marker also becomes a dependent of the predicate (In _ wordt aangeraden waakzaam te zijn_, we have (waakzaam,mark,te) ) 
+* csubj is used for clausal subjects. 
+* det is used for determiners, ie for elements with DET POS-tag, as explained above. 
 * expl, expl:pv
 * fixed
 * flat
