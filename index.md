@@ -74,14 +74,14 @@ Detailed documentation of the decisions w.r.t. features in the original data can
 
 ## Syntax
 
-* acl, acl:relcl
-* advcl
-* advmod
-* amod
-* appos
-* aux, aux:pass
-* case
-* cc
+* acl, acl:relcl: acl is used for phrases headed by a verb modifying a noun. These can be prenominal (as in _thans geldende rentestand_) postnominal (as in _de vraag of de rente zal stijgen_). acl:relcl is used for relative clauses. In the original syntactic annotation these are nodes with an _mod_ dependency relation that occur as sister to a nominal head, and which have a category ppres, ppart (prenominal), or cp, oti (postnominal) or rel (relative clauses). Verbs without dependents in prenominal position are considered to be amod. 
+* advcl: advl is used for phrases that occur as modifying phrases (adjuncts) and are dependents of a verbal head. In the original annotation they have relation _mod_ and they can be of category cp, oti, ppart, among others. 
+* advmod: advmod is used for adverbs and adverbial phrases modifying a verb. The POS of advmod elements is almost always ADV or ADJ. 
+* amod: amod if used for adjectives and other elements modifying a noun. The POS of amod elements is usually ADJ, but ADV and NOUN and others occur as well. ADV is used for elements such as _slechts (5 euro), vele (kookboeken), zo'n (25 optredens)_ and occurs in nominalisations (_het niet doen terugkeren_, where _niet_ is amod of the verb _terugkeren_, which itself is being used nominatively), and is used for adverbial pronouns (_de verlenging ervan_) 
+* appos: is used for appositions. In the original annotation, the relation app is used for a wide range of nominal phrases occurring in postnominal position (_de fotograaf Philip Mechanicus, Nooteboom's debuut 'Philip en de anderen', de jaren 1979-1981, de wethouder cultuur, presentatie Slibreeks, Hans Groenewegen, dichter en publicist, ZUiderzinnen, Festival van het woord, zondag 18 september 2005_. All these are mapped to the appos dependency relation, even though this stretches the intended use of appos in UD. 
+* aux, aux:pass aux is used for auxiliaries as defined above in the section on POS tags. Note that this implies that auxiliaries are dependents of the main verb with which they co-occur. In the original annotation, no distinction between verbs and auxiliaries is made, and auxiliaries always have a sister that is a clause headed by the main verb. Note that this also means that elements such as subjects, complementizers, and even the marker '_te_' become dependents of the main verb, and not the auxiliary. 
+* case case is used for prepositions (ADP) that introduce a prepositional phrase. The preposition is a dependent of the head of the nominal phrase. Where there is both a preposition and a postposition (_door de eeuwen heen_, _om hem heen_) both elements are case dependents of the nominal head. In cases where the nominal element is replaced by an R-pronoun (_er_ etc), the R-pronoun precedes the preposition, and may be nonadjacent to the preposition  (_U doet er verstandig aan_). Note that this is a source of non-projective annotations. 
+* cc cc is used for coordination words such as _en, of, maar_. 
 * ccomp
 * compound:prt
 * conj
