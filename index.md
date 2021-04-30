@@ -88,11 +88,11 @@ The Dutch treebanks are automatically converted from annotated and manually corr
 * compound:prt is used for seperable verbal prefixes (_ groeide uit, aan te wijzen_) and the non-verbal part of phrasal verbs (_ op prijs stellen, bekend staan, kenbaar maken_)
 * conj is used for conjuncts. 
 * cop is used for the copula _zijn_ only. Thus, the copula is a dependent of the predicate. If the copula is preceded by the inflection marker _te_, the marker also becomes a dependent of the predicate (In _ wordt aangeraden waakzaam te zijn_, we have (waakzaam,mark,te) ) 
-* csubj is used for clausal subjects. 
+* csubj is used for clausal subjects. Clausal subjects are sometimes introduced by expletive _het_ (marked as expl), as in _het blijft onduidelijk wat Japix bedoelt_. Clausal subjects can be of category cp, whsub, ti, or oti in the original annotation. 
 * det is used for determiners, ie for elements with DET POS-tag, as explained above. 
-* expl, expl:pv
-* fixed
-* flat
+* expl, expl:pv Expletives are _het_ or _er_ when used to introduce a clausal subject (_het is verstanding u te laten adviseren_, _u dient er rekening mee te houden dat..._) expl:pv is used for inherent reflexives (_ richt zich op, bevindt zich in, scheidt zich af, jaagt NP tegen zich in het harnas_) 
+* fixed Fixed is used for the non-initial parts of multi-word expressions, such as _ten aanzien van_, _voor zover_, _dan wel_, _fine fleur_) Also, titles of books and other works of art and some institutions are annotated as fixed expressions (_De ontdekking van de hemel, Faculteit Kunst en Cultuur_) and some amounts (_EUR  37,50, 15 uur_) Note that the decision on what to label as fixed or not follows largely from the original annotation (ie phrases with category mwu where the parts are not labeled as proper names).  Also note that fixed elements 
+* flat Flat is used for the non-initial 
 * iobj
 * mark
 * nmod, nmod:poss
