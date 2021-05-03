@@ -92,10 +92,10 @@ The Dutch treebanks are automatically converted from annotated and manually corr
 * det is used for determiners, ie for elements with DET POS-tag, as explained above. 
 * expl, expl:pv Expletives are _het_ or _er_ when used to introduce a clausal subject (_het is verstanding u te laten adviseren_, _u dient er rekening mee te houden dat..._) expl:pv is used for inherent reflexives (_ richt zich op, bevindt zich in, scheidt zich af, jaagt NP tegen zich in het harnas_) 
 * fixed Fixed is used for the non-initial parts of multi-word expressions, such as _ten aanzien van_, _voor zover_, _dan wel_, _fine fleur_) Also, titles of books and other works of art and some institutions are annotated as fixed expressions (_De ontdekking van de hemel, Faculteit Kunst en Cultuur_) and some amounts (_EUR  37,50, 15 uur_) Note that the decision on what to label as fixed or not follows largely from the original annotation (ie phrases with category mwu where the parts are not labeled as proper names).  Also note that fixed elements can in fact be coordinated (_ maandag 18 t/m zaterdag 23 april 2005_, where _april 2005_ is shared between to two conjuncts in the original annotatin) and that discontinous fixed expressions exist (exclusively in the so-called _wat-voor_ construction as in _wat is dit voor een kutfilm_)
-* flat Flat is used for the non-initial 
-* iobj
-* mark
-* nmod, nmod:poss
+* flat Flat is used for the non-initial tokens of multi-word proper names (_Kees van Kooten_) and other multi-word expressions that contain at least one proper name. In particular, in dates like _20 augustus 2000_ , 20 is the head with augustus and 2000 as flat dependents, as augustus is a name. Also, some titles of works of art are labeled flat, if at least one of the tokens was labeled as SPEC|deeleigen in the original annotation. ISSUE: there is some inconsistency between when a multi-word unit introduces flat or fixed dependents, but this is caused at least in part by the underlying annotation.
+* iobj Iobj is used for indirect objects that are NOT introduced by a preposition. The original annotation has both prepositional (_geef het boek aan haar_) and nominal (_geef haar het boek_) obj2 constituents. In UD, only the latter are iobj, while the former are obl dependents. 
+* mark Mark is used for subordinating conjunctions (_dat, omdat, wanneer, hoewel, etc._). The word _om_ is also a mark if it introduces a te-infinitive. The word _te_ preceding a verb is also a mark dependent of the verb. As auxiliaries take no dependents, the _te_ that may precede an auxiliary is attached, somewhat counterintuitively, to the main verb (_na door het moeras gedwaald te hebben_, here _te_ is a dependent of _gedwaald_)
+* nmod, nmod:poss 
 * nsubj, nsubj:pass
 * nummod
 * obj
