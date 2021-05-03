@@ -104,7 +104,7 @@ The Dutch treebanks are automatically converted from annotated and manually corr
 * parataxis Parataxis is used to label utterances that do not form a syntactic unit, but consist of a number of phrases for which no obvious dependency label can be given( In _dit in verband met de langere levensduur van de vrouw_, _dit_ is the root, with the rest of the phrase headed by _levensduur_ being a parataxis dependent of _dit_). Note that in cases of ellipsis, there is a preceding conjunction which also contains a predicate that can be seen as identical to the elided element. In parataxis constructions, this is not the case. Parataxis is also used in attribution, as in _Het deksel was er afgeslagen, zei Rijkers_ where the speech verb _zei_ is a parataxis dependent of _afgeslagen_. 
 * punct Punct is used for punctuation signs. 
 * root Root is the root of the utterance. This is usually the main verb, but in copula constructions it is the head of the predicate. 
-* xcomp Xcomp is used for the head of non-finite verbal complements of verbs (_de debiteuren staan te dringen_), and for predicative complements of non-copula verbs. 
+* xcomp Xcomp is used for the head of non-finite verbal complements of verbs (_de burgemeester wil een traditie handhaven_, _de debiteuren staan te dringen_, _hij vraagt om een krediet beschikbaar te stellen_), and for predicative complements of non-copula verbs (_Fennema werd raadslid_, _de aandeelhouders vonden het bod onaanvaardbaar_). In the enhanced dependencies, the subject of xcomp dependents that are non-finite clauses are added. For other predicative elements no controlled subject is identified. 
 
 
 ---
