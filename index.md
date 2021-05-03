@@ -97,9 +97,9 @@ The Dutch treebanks are automatically converted from annotated and manually corr
 * mark Mark is used for subordinating conjunctions (_dat, omdat, wanneer, hoewel, etc._). The word _om_ is also a mark if it introduces a te-infinitive. The word _te_ preceding a verb is also a mark dependent of the verb. As auxiliaries take no dependents, the _te_ that may precede an auxiliary is attached, somewhat counterintuitively, to the main verb (_na door het moeras gedwaald te hebben_, here _te_ is a dependent of _gedwaald_)
 * nmod, nmod:poss nmod is used for nominal and prepositional phrases modifying a noun (_een neiging to dalen, de rente in de VS_). In _het Dow Jones gemiddelde_, Dow is an nmod dependent of _gemiddelde_. Note also that some nouns can be used as adjective as in _de afzijdige waarnemer_, where _afzijdige_ is a NOUN and thus an nmod dependent of _waarnemer_. In _Enkele malen_ the pronoun _Enkele_ is a modifier of the noun in the original annotation, and thus also labeled as nmod.  Nmod:poss is used for possessive pronouns (_hun oude boeken_) en genitives (_Nootebooms debuut_). 
 * nsubj, nsubj:pass Nsubj is used for the nominal subject of finite sentences. Nsubj:pass is used for the subject of passives. Clausal subjects are labeled csubj.
-* nummod
-* obj
-* obl, obl:agent
+* nummod Nummod is used for NUM elements occurring in pre-nominal position (_tien arrestaties, 450.000 mark_) In _zeven miljard gulden_ we have _zeven_ as nummod dependent of _miljard_, while _miljard_ (a NOUN) is a nmod of _gulden_. 
+* obj Obj is used for the direct object of verbal heads (_winst boeken, _een shock oplopen_). Note that reflexives are labeled as obj if the verb is not inherently reflexive (in _zich emanciperen_, _zich_ is an obj). 
+* obl, obl:agent Obl is used for prepositional arguments and adjuncts of a verbal head (_klopt met de werkelijkheid,_ ). In (temporal) nominal adjuncts can appear without preposition (_enkele malen_), these are also obl. Obl:agent is used for the door-phrase that can be present in passives (_hij moet door zijn vrouw tot kalmte worden gebracht_). As the underlying annotation does not mark such prepositional phrases, the labeling is based on heuristics and may contain errors. 
 * orphan
 * parataxis
 * punct
