@@ -25,7 +25,7 @@ udver: '2'
 
 ### Tags
 
-* ADJ (XPOS=ADJ) is used for adjectives. Adjectives occur as prenominal modifiers, as predicates, as seperable verb-particles, as adverbs, as part of fixed expressions and names. Also, in cases where an adjective functions as noun (_om Nederlandstaligen te pesten_) the POS is still ADJ. Ordinal number words such as _eerste, 60ste_ (XPOS=TW|rang) are also ADJ.
+* **ADJ** (XPOS=ADJ) is used for adjectives. Adjectives occur as prenominal modifiers, as predicates, as seperable verb-particles, as adverbs, as part of fixed expressions and names. Also, in cases where an adjective functions as noun (_om Nederlandstaligen te pesten_) the POS is still ADJ. Ordinal number words such as _eerste, 60ste_ (XPOS=TW|rang) are also ADJ.
 * ADP (XPOS=VZ) is used for prepositions and postpositions. They introduce nominal and verbal modifiers. They also occur as seperable verb-particles, as part of fixed expressions and names. The verbal inflexion element _te_ is also an ADP.  In prepositional phrases such as _ten opzichte van_ _ten_ and _van_ are ADP and _opzichte_ is a NOUN. 
 * ADV (XPOS=BW) is used for adverbs. Also, some adverbial pronouns (R-pronouns) such as _daar, er, ergens, waar_ are ADV. 
 * AUX (XPOS=WW) is used for 
